@@ -1,8 +1,24 @@
 # css-coding-guidelines
 Proposed style guide for writing CSS.  An architecture that can be followed for sustainable and maintainable CSS.
 
+# BEM - meaning block, element, modifier
+This coding guide adopts the front-end naming methodology called [BEM](https://en.bem.info/).  It is the best 
+way to name your CSS classes. This will give our classes more transparency and meaning to other developers.  They
+are far more strict and informative, which makes BEM naming convention ideal for teams of developers.
+
+Here is the pattern:
+```css
+.block {}
+.block__element {}
+.block--modifier {}
+```
+
+* ```.block``` represents the higher level of an abstraction or component.
+* ```.block__element``` represents a descendent of ```.block``` that helps form ```.block``` as a whole.
+* ```.block--modifier``` represents a different state or version of ```.block```.
+
 ## NO NESTING
-I know it's very tempting to go wild with Selector nesting using CSS preprocessors such as LESS and SASS.  But in
+I know it's very tempting to go wild with selector nesting using CSS preprocessors such as LESS and SASS.  But in
 this case, try to refrain from going more than 3 deep.  Keep nesting to a minimum!  Nesting Selectors is not
 performant for the browser and it is a maintainability nightmare.
 
