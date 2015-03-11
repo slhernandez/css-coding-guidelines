@@ -1,7 +1,7 @@
 # css-coding-guidelines
 Proposed style guide for writing CSS.  An architecture that can be followed for sustainable and maintainable CSS.
 
-# BEM - meaning block, element, modifier
+### BEM - meaning block, element, modifier
 This coding guide adopts the front-end naming methodology called [BEM](https://en.bem.info/).  It is the best 
 way to name your CSS classes. This will give our classes more transparency and meaning to other developers.  They
 are far more strict and informative, which makes BEM naming convention ideal for teams of developers.
@@ -17,7 +17,7 @@ Here is the pattern:
 * ```.block__element``` represents a descendent of ```.block``` that helps form ```.block``` as a whole.
 * ```.block--modifier``` represents a different state or version of ```.block```.
 
-## NO NESTING
+### NO NESTING
 I know it's very tempting to go wild with selector nesting using CSS preprocessors such as LESS and SASS.  But in
 this case, try to refrain from going more than 3 deep.  Keep nesting to a minimum!  Nesting Selectors is not
 performant for the browser and it is a maintainability nightmare.
@@ -60,7 +60,7 @@ performant for the browser and it is a maintainability nightmare.
 }
 ```
 
-## Featured Details for coding guidelines
+### Featured Details for coding guidelines
 * ```.js``` Prefixed class names for elements being relied upon for javascript selectors.
 * ```.u-``` Prefixed class name or single purpose utility classes like ```.u-underline```, ```.u-captialize```, etc.
 * Introduction of meaningful hyphens and underscores to separate between component, descendant components, and modifies.
@@ -69,7 +69,7 @@ performant for the browser and it is a maintainability nightmare.
 * Mixins reduced to polyfills only and prefixed with ```.m-```.
 
 
-## Variables
+### Variables
 
 CSS variable names should be structured as follows:
 *property
