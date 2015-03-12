@@ -88,6 +88,45 @@ Property is ```color``` followed by value ```grayLight``` that should be used fo
 ## Colors
 Color should live within their own LESS file ```colors.less``` and should be represented in RGB, RGBA or HEX.  
 
+## Utilities
+
+Utilities are meant to be purely structural and for positioning elements. Utilities can be used on any element;
+multiple utilities, and other utilities that can be used alongside component classes.
+
+Utilities purpose is to provide access to certain CSS properties and patterns that are used frequently together.
+
+Example of some utilities:
+* floats
+* containing floats
+* vertical alignment
+* text truncation
+
+Designating these patterns to utilities will help reduce repetition.  It will also provide consistency throughout 
+the CSS markup and reduce code.  We won't have three different versions of clearfix in a project.
+
+``` html
+<div class="u-clearfix">
+  <p class="u-textTruncate">{$text}</p>
+  <img class="u-pullLeft" src="" alt="">
+  <img class="u-pullLeft" src="" alt="">
+  <img class="u-pullLeft" src="" alt="">
+</div>
+```
+
+Syntax -> ```u-<utilityName>```
+
+Utilities must use a camel case name, prefixed with a ```u``` namespace.  What follows is an example of how it can be used.
+
+``` html
+<div class="u-clearfix">
+  <a class="u-pullLeft" href="#">
+    <img class="u-block" src="" alt="">
+  </a>
+  <p class="u-sizeFill u-textBreak"></p>
+</div>
+```
+
+
 
 
 
