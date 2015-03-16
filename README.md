@@ -16,6 +16,12 @@ This coding guide adopts the front-end naming methodology called [BEM](https://e
 way to name your CSS classes. This will give our classes more transparency and meaning to other developers.  They
 are far more strict and informative, which makes BEM naming convention ideal for teams of developers.
 
+For this style guide we are going the change the naming for easier readability and maintainablity.
+
+Block -> component
+Element -> descendant
+Modifier -> modifier
+
 Here is the pattern:
 ```css
 .myComponent {}
