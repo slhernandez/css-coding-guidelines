@@ -236,3 +236,70 @@ every component must define its own style for the state.
 </article>
 ```
 
+## z-Index Scale
+
+Let's use a sensible z-index scale.  Please do not use 9999!  
+
+Just use the z-index scale that is found in z-index.less.
+```@zIndex-1 - @zIndex9``` are provided.  Nothing should be higher than ```@zIndex-9```.
+
+## Font Weight
+
+Raw font weights should be avoided.  Use the appropriate mixin ```.font-sansI7, .font-sansN7, etc ```
+
+The suffix definition:
+
+```
+N = normal
+I = italic
+1 = ultra light weight
+2 = light font-weight
+3 = book font-weight
+4 = normal font-weight
+7 = bold font-weight
+```
+
+Refer to type.less for type size, letter-spacing and line heights. Raw sizes, spaces, and
+line heights should be avoided outside of type.less
+
+```css
+@fontSize-micro
+@fontSize-smallest
+@fontSize-smaller
+@fontSize-small
+@fontSize-base
+@fontSize-large
+@fontSize-larger
+@fontSize-largest
+@fontSize-jumbo
+```
+
+## Line Height
+
+Please use this scale for blocks of text
+```css
+@lineHeight-tightest
+@lineHeight-tighter
+@lineHeight-tight
+@lineHeight-baseSans
+@lineHeight-base
+@lineHeight-loose
+@lineHeight-looser
+```
+
+## Letter Spacing
+
+Please use the following scale for var scale
+
+```css
+@letterSpacing-tightest
+@letterSpacing-tighter
+@letterSpacing-tight
+@letterSpacing-normal
+@letterSpacing-loose
+@letterSpacing-looser
+```
+
+
+
+
