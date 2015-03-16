@@ -236,7 +236,7 @@ every component must define its own style for the state.
 </article>
 ```
 
-## z-Index Scale
+### z-Index Scale
 
 Let's use a sensible z-index scale.  Please do not use 9999!  
 
@@ -274,7 +274,7 @@ line heights should be avoided outside of type.less
 @fontSize-jumbo
 ```
 
-## Line Height
+### Line Height
 
 Please use this scale for blocks of text
 ```css
@@ -287,7 +287,7 @@ Please use this scale for blocks of text
 @lineHeight-looser
 ```
 
-## Letter Spacing
+### Letter Spacing
 
 Please use the following scale for var scale
 
