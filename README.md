@@ -205,9 +205,29 @@ Component descendant is a class that is attached to a descendant node of a compo
 responsible for apply presentation directly to the descendant on behalf of a particular 
 component. Descendant name should also be written in camel case.
 
+```css
+.newsItem {
+...
+}
+
+.newsItem-header {
+...
+  &.newsItem-header--redTitle {
+    color: red;
+  }
+}
+
+.newsItem-avatar {
+...
+}
+
+.newsItem-body {
+}
+```
+
 ```html
 <article class="newsItem">
-  <header class="newsItem-header">
+  <header class="newsItem-header newsItem-header--redTitle">
     <img class="newsItem-avatar" src="" alt="">
     ...
   </header>
@@ -216,6 +236,8 @@ component. Descendant name should also be written in camel case.
   </div>
 </article>
 ```
+
+For the CSS, remember to minimize the use of nesting.  Or don't nest at all.
 
 ### componentName at the is-stateOfComponent level
 
