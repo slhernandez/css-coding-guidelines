@@ -156,7 +156,75 @@ JavaScript specific  classes  should not be styled.
 Following the BEM syntax described in this styleguide.
 Syntax:```<componentName>[--modifier]-[descendantName]```
 
+Component names should be constructed in camel case.  The purpose for component names are the following:
+* Distinguishes between classes for the root element, descendant element and modifications.
+* This will keep the specificity of selectors low.
+* It helps decouple presentation semantics from document(layout) semantics.
 
+Components will comprise well over the majority of CSS markup.  They are custom elements that enclose specific
+semantics, styling, and behaviour.
 
+### componentName at the root level
+```css
+.creditCard { }
+```
 
+```html
+<article class="creditCard">
+...
+</article>
+```
+
+### componentName at the modifier level
+
+A component modifier is a class that modifies the presentation of the base component in some form.
+Modifier name should be written in camel case.  
+
+```css
+/* Core button */
+.btn { /* ... */ }
+/* Default button style */
+.btn--default { /* ... */ }
+```
+
+```html 
+<button class="btn btn--primary">...</button>
+```
+
+### componentName at the descendant level
+
+Component descendant is a class that is attached to a descendant node of a componet. It's 
+responsible for apply presentation directly to the descendant on behalf of a particular 
+component. Descendant name should also be written in camel case.
+
+```html
+<article class="newsItem">
+  <header class="newsItem-header">
+    <img class="newsItem-avatar" src="" alt="">
+    ...
+  </header>
+  <div class="newsItem-body">
+  ...
+  </div>
+</article>
+```
+
+### componentName at the is-stateOfComponent level
+
+Use ```is-stateName``` for state-based modifications of components.  The state name must be
+in camel case. Never style these classes.  They only should be used as adjoining classes.
+
+JS can add/remove these classes.  You can use state name classes in multiple contexts. But
+every component must define its own style for the state. 
+
+```css
+.profile { /* ... */ }
+.profile.is-expanded { /* ... */ }
+```
+
+```html
+<article class="profile is-expanded">
+...
+</article>
+```
 
