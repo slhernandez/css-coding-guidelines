@@ -18,14 +18,16 @@ are far more strict and informative, which makes BEM naming convention ideal for
 
 Here is the pattern:
 ```css
-.block {}
-.block__element {}
-.block--modifier {}
+.myComponent {}
+.myComponent-descendantComponent {}
+.myComponent--modifier {}
 ```
 
-* ```.block``` represents the higher level of an abstraction or component.
-* ```.block__element``` represents a descendent of ```.block``` that helps form ```.block``` as a whole.
-* ```.block--modifier``` represents a different state or version of ```.block```.
+* ```.myComponent``` represents the higher level of an abstraction or component.
+* ```.myComponent-descendantComponent``` represents a descendent of ```.myComponent``` that helps form ```.myComponent``` as a whole.
+* ```.myComponent--modifier``` represents a different state or version of ```.myComponent```.
+
+For more specific examples for how to apply this naming methodology, skip to the Components section of this guide.
 
 ### NO NESTING
 I know it's very tempting to go wild with selector nesting using CSS preprocessors such as LESS and SASS.  But in
