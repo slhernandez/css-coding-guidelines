@@ -18,9 +18,9 @@ are far more strict and informative, which makes BEM naming convention ideal for
 
 For this style guide we are going the change the naming for easier readability and maintainablity.
 
-Block -> component
-Element -> descendant
-Modifier -> modifier
+* ```Block -> component```
+* ```Element -> descendant```
+* ```Modifier -> modifier```
 
 Here is the pattern:
 ```css
