@@ -243,7 +243,7 @@ Let's use a sensible z-index scale.  Please do not use 9999!
 Just use the z-index scale that is found in z-index.less.
 ```@zIndex-1 - @zIndex9``` are provided.  Nothing should be higher than ```@zIndex-9```.
 
-## Font Weight
+### Font Weight
 
 Raw font weights should be avoided.  Use the appropriate mixin ```.font-sansI7, .font-sansN7, etc ```
 
