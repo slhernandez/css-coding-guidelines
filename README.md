@@ -1,6 +1,16 @@
 # css-coding-guidelines
 Proposed style guide for writing CSS.  An architecture that can be followed for sustainable and maintainable CSS.
 
+This style guide is a derivative of the following well known style guides:
+
+* [Medium](https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06)
+* [SUIT CSS](https://github.com/suitcss/suit)
+* [CSS Guideline](http://cssguidelin.es/)
+
+I have taken huge pieces of each guide (shown above) and merged them into this one. I have taken
+characteristics that I have personally thought will be useful in my projects.  If you find something
+that you disagree with, change it and provide reasons why.
+
 ### BEM - meaning block, element, modifier
 This coding guide adopts the front-end naming methodology called [BEM](https://en.bem.info/).  It is the best 
 way to name your CSS classes. This will give our classes more transparency and meaning to other developers.  They
@@ -127,6 +137,24 @@ Utilities must use a camel case name, prefixed with a ```u``` namespace.  What f
 ```
 
 
+## JavaScript Hooks
+
+Do not bind your CSS and your JS onto the same class name in your HTML.  CSS and class names are more maintainable when
+you bind your JavaScript to it's own class.  Not binding JS to their own class name will cause unnecessary havoc to the
+code base.  For instance, if you use a class name for both CSS styles and JavaScript binding, refactoring the exiting 
+class name will break the JS functionality. 
+
+Prepend ```js-``` to class names. 
+```html
+<input  type="submit" class="btn js-btn" value="Submit" />
+```
+
+JavaScript specific  classes  should not be styled.
+
+## Components
+
+Following the BEM syntax described in this styleguide.
+Syntax:```<componentName>[--modifier]-[descendantName]```
 
 
 
