@@ -226,8 +226,9 @@ component. Descendant name should also be written in camel case.
 ```
 
 ```html
-<article class="newsItem">
-  <header class="newsItem-header newsItem-header--redTitle">
+<article class="newsItem u-pullleft">
+  <header class="newsItem-header">
+    <div class="newsItem-title newsItem-title--default"></h2>
     <img class="newsItem-avatar" src="" alt="">
     ...
   </header>
@@ -281,20 +282,48 @@ I = italic
 7 = bold font-weight
 ```
 
-Refer to type.less for type size, letter-spacing and line heights. Raw sizes, spaces, and
+Refer to typography.less for type size, letter-spacing and line heights. Raw sizes, spaces, and
 line heights should be avoided outside of type.less
 
+All font sizes will be expressed in ems.  To provide a helpful guide for pixel to em translation, 
+all font size variables are expressed in pixels.
+
+```16px is 1em```
+
 ```css
-@fontSize-micro
-@fontSize-smallest
-@fontSize-smaller
-@fontSize-small
-@fontSize-base
-@fontSize-large
-@fontSize-larger
-@fontSize-largest
-@fontSize-jumbo
+@font-size-9: 0.563;
+@font-size-10: 0.635em;
+@font-size-11: 0.688em;
+@font-size-12: 0.750em;
+@font-size-13: 0.813em;
+@font-size-14: 0.875em;
+@font-size-15: 0.938em;
+@font-size-16: 1.000em;
+@font-size-17: 1.063em;
+@font-size-18: 1.125em;
+@font-size-20: 1.250em;
+@font-size-21: 1.313em;
+@font-size-22: 1.375em;
+@font-size-23: 1.438em;
+@font-size-24: 1.500em;
+@font-size-26: 1.625em;
+@font-size-28: 1.750em;
+@font-size-30: 1.875em;
+@font-size-31: 1.938em;
+@font-size-33: 2.063em;
+@font-size-32: 2em;
+@font-size-34: 2.125em;
+@font-size-36: 2.3em;
+@font-size-40: 2.5em;
+@font-size-44: 2.750em;
+@font-size-48: 3em;
+@font-size-60: 3.750em;
+@font-size-64: 4em;
+@font-size-75: 4.688em;
 ```
+
+If you need a body of text to be 18px, just use the less variable @font-size-18.  This variable will use the 
+equivalent ems value of 1.125em.  This is very convenient since the majority of us still view sizes as pixels.
 
 ### Line Height
 
