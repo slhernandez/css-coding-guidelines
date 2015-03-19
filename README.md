@@ -268,7 +268,7 @@ Just use the z-index scale that is found in z-index.less.
 
 ### Font Weight
 
-Raw font weights should be avoided.  Use the appropriate mixin ```.font-sansI7, .font-sansN7, etc ```
+Raw font weights should be avoided.  Use the appropriate mixin ```.I7, .N7, etc ```
 
 The suffix definition:
 
@@ -322,8 +322,8 @@ all font size variables are expressed in pixels.
 @font-size-75: 4.688em;
 ```
 
-If you need a body of text to be 18px, just use the less variable @font-size-18.  This variable will use the 
-equivalent ems value of 1.125em.  This is very convenient since the majority of us still view sizes as pixels.
+If you need a body of text to be ```18px```, just use the less variable ```@font-size-18```.  This variable will use the 
+equivalent ems value of ```1.125em```.  This is very convenient since the majority of us still view sizes as pixels.
 
 ### Line Height
 
